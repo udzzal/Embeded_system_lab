@@ -1,0 +1,13 @@
+// ekhane 2ta code,task-3 er ta jabe microcontroller at89c51 er 1st ta te.and nicher code ta jabe 2nd 89c51 e
+
+#include<reg51.H>
+
+void Delay();
+
+void receiver(){
+
+	while(1){
+		P2=P1;
+		Delay();
+	}
+}
