@@ -1,0 +1,29 @@
+#include <reg51.H>
+
+sbit RED = P2^0;
+sbit YELLOW = P2^1;
+sbit GREEN = P2^2;
+
+void Delay(){
+    int i, j;
+
+    for(i = 0; i < 10; i++) {
+        for(j = 0; j < 10000; j++);
+    }
+}
+
+void main(){
+    while(1){
+        RED = 1;
+        Delay();
+        RED = 0;
+
+        YELLOW = 1;
+        Delay();
+        YELLOW = 0;
+
+        GREEN = 1;
+        Delay();
+        GREEN = 0;
+    }
+}
